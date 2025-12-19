@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { workshops, categories } from '../data/mockData';
-import WorkshopCard from '../components/WorkshopCard';
-import Button from '../components/Button';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { workshops, categories } from "../data/mockData";
+import WorkshopCard from "../components/WorkshopCard";
+import Button from "../components/Button";
 
 export default function Home() {
-  const [searchCity, setSearchCity] = useState('');
-  const [searchCategory, setSearchCategory] = useState('');
-  const [searchDate, setSearchDate] = useState('');
+  const [searchCity, setSearchCity] = useState("");
+  const [searchCategory, setSearchCategory] = useState("");
+  const [searchDate, setSearchDate] = useState("");
 
   const popularWorkshops = workshops.slice(0, 6);
 
@@ -21,7 +21,8 @@ export default function Home() {
               کارگاه‌های خلاقیت در یک آخر هفته
             </h1>
             <p className="text-lg md:text-xl text-neutral-700 mb-8 leading-relaxed">
-              کارگاه‌های بافتنی، سفال، زیورآلات و… را از مربی‌های محلی کشف کن و آنلاین رزرو کن.
+              کارگاه‌های بافتنی، سفال، زیورآلات و… را از مربی‌های محلی کشف کن و
+              آنلاین رزرو کن.
             </p>
             <Link to="/workshops">
               <Button size="lg" className="mb-8">
@@ -33,7 +34,9 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-right">شهر</label>
+                  <label className="block text-sm font-medium mb-2 text-right">
+                    شهر
+                  </label>
                   <select
                     value={searchCity}
                     onChange={(e) => setSearchCity(e.target.value)}
@@ -46,7 +49,9 @@ export default function Home() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-right">دسته‌بندی</label>
+                  <label className="block text-sm font-medium mb-2 text-right">
+                    دسته‌بندی
+                  </label>
                   <select
                     value={searchCategory}
                     onChange={(e) => setSearchCategory(e.target.value)}
@@ -61,7 +66,9 @@ export default function Home() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-right">تاریخ</label>
+                  <label className="block text-sm font-medium mb-2 text-right">
+                    تاریخ
+                  </label>
                   <input
                     type="date"
                     value={searchDate}
@@ -102,7 +109,9 @@ export default function Home() {
       {/* Popular Workshops Section */}
       <section className="py-12 md:py-16 bg-neutral-50">
         <div className="container-custom">
-          <h2 className="text-3xl font-bold text-center mb-8">کارگاه‌های محبوب این هفته</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">
+            کارگاه‌های محبوب این هفته
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {popularWorkshops.map((workshop) => (
               <WorkshopCard key={workshop.id} workshop={workshop} />
@@ -123,17 +132,23 @@ export default function Home() {
             <div>
               <div className="text-4xl mb-4">🔒</div>
               <h3 className="font-bold text-lg mb-2">پرداخت امن</h3>
-              <p className="text-neutral-600 text-sm">پرداخت‌های شما به صورت امن انجام می‌شود</p>
+              <p className="text-neutral-600 text-sm">
+                پرداخت‌های شما به صورت امن انجام می‌شود
+              </p>
             </div>
             <div>
               <div className="text-4xl mb-4">💬</div>
               <h3 className="font-bold text-lg mb-2">پشتیبانی ۲۴/۷</h3>
-              <p className="text-neutral-600 text-sm">همیشه در کنار شما هستیم</p>
+              <p className="text-neutral-600 text-sm">
+                همیشه در کنار شما هستیم
+              </p>
             </div>
             <div>
               <div className="text-4xl mb-4">⭐</div>
               <h3 className="font-bold text-lg mb-2">امتیاز هنرجوها</h3>
-              <p className="text-neutral-600 text-sm">بیش از ۱۰۰۰ هنرجوی راضی</p>
+              <p className="text-neutral-600 text-sm">
+                بیش از ۱۰۰۰ هنرجوی راضی
+              </p>
             </div>
           </div>
         </div>
@@ -141,4 +156,3 @@ export default function Home() {
     </div>
   );
 }
-

@@ -9,7 +9,7 @@ export default function Header() {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/dastsaz-client" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <div className="text-2xl font-bold text-primary-600">دست‌ساز</div>
           </Link>
 

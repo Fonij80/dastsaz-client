@@ -1,12 +1,12 @@
-import { useSearchParams, Link } from 'react-router-dom';
-import { workshops } from '../data/mockData';
-import Button from '../components/Button';
+import { useSearchParams, Link } from "react-router-dom";
+import { workshops } from "../data/mockData";
+import Button from "../components/Button";
 
 export default function Confirmation() {
   const [searchParams] = useSearchParams();
-  const workshopId = searchParams.get('workshop');
-  const sessionId = searchParams.get('session');
-  const count = searchParams.get('count');
+  const workshopId = searchParams.get("workshop");
+  const sessionId = searchParams.get("session");
+  const count = searchParams.get("count");
 
   const workshop = workshops.find((w) => w.id === workshopId);
   const session = workshop?.sessions.find((s) => s.id === sessionId);
@@ -20,7 +20,7 @@ export default function Confirmation() {
   }
 
   const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('fa-IR').format(price);
+    return new Intl.NumberFormat("fa-IR").format(price);
   };
 
   const totalPrice = workshop.price * (count ? parseInt(count) : 1);
@@ -43,7 +43,9 @@ export default function Confirmation() {
           {/* Booking Code */}
           <div className="bg-neutral-50 rounded-lg p-6 mb-8">
             <div className="text-sm text-neutral-600 mb-2">کد رزرو</div>
-            <div className="text-3xl font-bold text-primary-600 font-mono">{bookingCode}</div>
+            <div className="text-3xl font-bold text-primary-600 font-mono">
+              {bookingCode}
+            </div>
           </div>
 
           {/* Workshop Summary */}
@@ -57,11 +59,11 @@ export default function Confirmation() {
               <div className="flex items-center justify-between">
                 <span className="text-neutral-600">تاریخ:</span>
                 <span className="font-medium">
-                  {new Date(session.date).toLocaleDateString('fa-IR', {
-                    weekday: 'long',
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
+                  {new Date(session.date).toLocaleDateString("fa-IR", {
+                    weekday: "long",
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
                   })}
                 </span>
               </div>
@@ -75,7 +77,9 @@ export default function Confirmation() {
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-neutral-600">قیمت کل:</span>
-                <span className="font-bold text-primary-600">{formatPrice(totalPrice)} تومان</span>
+                <span className="font-bold text-primary-600">
+                  {formatPrice(totalPrice)} تومان
+                </span>
               </div>
             </div>
           </div>
@@ -104,4 +108,3 @@ export default function Confirmation() {
     </div>
   );
 }
-

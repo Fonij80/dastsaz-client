@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -9,7 +9,8 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold text-lg mb-4">دست‌ساز</h3>
             <p className="text-sm leading-relaxed">
-              پلتفرم رزرو کارگاه‌های دستی کوتاه‌مدت. کشف کنید، یاد بگیرید، خلق کنید.
+              پلتفرم رزرو کارگاه‌های دستی کوتاه‌مدت. کشف کنید، یاد بگیرید، خلق
+              کنید.
             </p>
           </div>
 
@@ -18,17 +19,26 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">لینک‌های سریع</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/workshops" className="hover:text-primary-400 transition-colors">
+                <Link
+                  to="/workshops"
+                  className="hover:text-primary-400 transition-colors"
+                >
                   کارگاه‌ها
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-primary-400 transition-colors">
+                <Link
+                  to="/about"
+                  className="hover:text-primary-400 transition-colors"
+                >
                   درباره ما
                 </Link>
               </li>
               <li>
-                <Link to="/host/create" className="hover:text-primary-400 transition-colors">
+                <Link
+                  to="/host/create"
+                  className="hover:text-primary-400 transition-colors"
+                >
                   میزبانی کارگاه
                 </Link>
               </li>
@@ -40,17 +50,26 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">پشتیبانی</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/help" className="hover:text-primary-400 transition-colors">
+                <Link
+                  to="/help"
+                  className="hover:text-primary-400 transition-colors"
+                >
                   راهنما
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-primary-400 transition-colors">
+                <Link
+                  to="/contact"
+                  className="hover:text-primary-400 transition-colors"
+                >
                   تماس با ما
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="hover:text-primary-400 transition-colors">
+                <Link
+                  to="/terms"
+                  className="hover:text-primary-400 transition-colors"
+                >
                   قوانین و مقررات
                 </Link>
               </li>
@@ -61,13 +80,25 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">شبکه‌های اجتماعی</h4>
             <div className="flex gap-4">
-              <a href="#" className="text-2xl hover:text-primary-400 transition-colors" aria-label="اینستاگرام">
+              <a
+                href="#"
+                className="text-2xl hover:text-primary-400 transition-colors"
+                aria-label="اینستاگرام"
+              >
                 📷
               </a>
-              <a href="#" className="text-2xl hover:text-primary-400 transition-colors" aria-label="تلگرام">
+              <a
+                href="#"
+                className="text-2xl hover:text-primary-400 transition-colors"
+                aria-label="تلگرام"
+              >
                 ✈️
               </a>
-              <a href="#" className="text-2xl hover:text-primary-400 transition-colors" aria-label="لینکدین">
+              <a
+                href="#"
+                className="text-2xl hover:text-primary-400 transition-colors"
+                aria-label="لینکدین"
+              >
                 💼
               </a>
             </div>
@@ -81,4 +112,3 @@ export default function Footer() {
     </footer>
   );
 }
-

@@ -9,12 +9,14 @@ import Auth from "./pages/Auth";
 import HostCreateWorkshop from "./pages/HostCreateWorkshop";
 import About from "./pages/About";
 
+const basename = import.meta.env.DEV ? "/" : "/dastsaz-client";
+
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Layout>
         <Routes>
-          <Route path="/dastsaz-client" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/workshops" element={<WorkshopList />} />
           <Route path="/workshops/:id" element={<WorkshopDetail />} />
           <Route path="/booking" element={<Booking />} />
